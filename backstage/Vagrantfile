@@ -1,0 +1,17 @@
+Vagrant.configure(2) do |config|
+  
+  config.vm.box = "centos8"
+
+  config.vm.network "public_network", bridge: "en0"
+
+  config.vm.provider "parallels" do |prl|
+    prl.memory = 4096 
+    prl.cpus = 2
+  end
+
+  config.vm.provision "chef_solo" do |chef|
+    chef.arguments = "--chef-license accept"
+    chef.add_recipe "backstage"
+  end
+
+end

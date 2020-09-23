@@ -1,0 +1,6 @@
+name             'backstage'
+maintainer       'Dmitry Tikhomirov'
+maintainer_email ''
+license          'All rights reserved'
+description      'Installs Backstage'
+version          '1.0.0'
